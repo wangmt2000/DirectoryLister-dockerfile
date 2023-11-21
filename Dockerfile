@@ -13,7 +13,8 @@ RUN tar -xzf /var/www/html/DirectoryLister-3.12.3.tar.gz -C /var/www/html/
 RUN rm /var/www/html/DirectoryLister-3.12.3.tar.gz
 
 # 定义工作目录
-WORKDIR /var/www/html/DirectoryLister
+#WORKDIR /var/www/html/DirectoryLister
+WORKDIR /var/www/html/
 
 # 安装所需的 PHP 扩展和依赖
 RUN apk --no-cache add \
