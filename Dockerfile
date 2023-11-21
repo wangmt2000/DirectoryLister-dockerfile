@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y \
  && docker-php-ext-install -j$(nproc) zip dom fileinfo
 
 # 下载并解压 Directory Lister
-ADD https://github.com/DirectoryLister/DirectoryLister/archive/refs/tags/v3.12.3.tar.gz /var/www/html/
+ADD https://github.com/DirectoryLister/DirectoryLister/releases/download/3.12.3/DirectoryLister-3.12.3.tar.gz /var/www/html/
+
 
 # 解压文件
 RUN tar -xzf /var/www/html/v3.12.3.tar.gz -C /var/www/html/
