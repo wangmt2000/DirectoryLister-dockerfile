@@ -1,4 +1,5 @@
 FROM php:8.3.0RC6-zts-alpine3.18
+
 # 下载并解压 DirectoryLister
 ADD https://github.com/DirectoryLister/DirectoryLister/releases/download/3.12.3/DirectoryLister-3.12.3.tar.gz /var/www/html/
 
@@ -13,12 +14,12 @@ WORKDIR /var/www/html/DirectoryLister
 
 # 安装所需的 PHP 扩展和依赖
 RUN apk --no-cache add \
-    php7.4-zip \
-    php7.4-xml \
-    php7.4-mbstring \
-    php7.4-gd \
-    php7.4-dom \
-    php7.4-fileinfo
+    php-zip \
+    php-xml \
+    php-mbstring \
+    php-gd \
+    php-dom \
+    php-fileinfo
 
 # 设置文件权限（根据需要进行调整）
 RUN chown -R www-data:www-data /var/www/html/DirectoryLister
@@ -27,6 +28,4 @@ RUN chown -R www-data:www-data /var/www/html/DirectoryLister
 EXPOSE 9000
 
 # 指定容器启动时执行的命令（根据需要进行调整）
-CMD ["php-fpm7.4", "-F"]
-
-#by poe-AI
+CMD ["php-fpm", "-F"]
