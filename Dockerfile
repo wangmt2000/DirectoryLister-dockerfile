@@ -34,4 +34,4 @@ RUN chown -R www-data:www-data /var/www/html/directory-lister
 EXPOSE 80
 
 # 指定容器启动时执行的命令
-CMD ["apache2-foreground"]
+#CMD ["apache2-foreground"]
