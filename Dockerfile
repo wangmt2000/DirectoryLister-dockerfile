@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /var/www/html/
 ADD https://github.com/DirectoryLister/DirectoryLister/releases/download/3.12.3/DirectoryLister-3.12.3.tar.gz /var/www/html/
 RUN ls /var/www/html/
-ADD https://github.com/DirectoryLister/DirectoryLister/releases/download/3.12.3/DirectoryLister-3.12.3.tar.gz
-RUN ls /var/www/html/
+
+
 
 # 解压文件
 #RUN tar -xzf /var/www/html/v3.12.3.tar.gz -C /var/www/html/
