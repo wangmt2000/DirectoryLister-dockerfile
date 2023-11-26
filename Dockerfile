@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     libjpeg62-turbo-dev \
     libpng-dev \
  && docker-php-ext-install -j$(nproc) zip 
+ # php:7.4-apache 自带dom和fileinfo扩展
 # 下载并解压 Directory Lister
 ADD https://github.com/DirectoryLister/DirectoryLister/releases/download/3.12.3/DirectoryLister-3.12.3.tar.gz /var/www/html/
 
