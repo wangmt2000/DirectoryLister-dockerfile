@@ -18,7 +18,7 @@ RUN ls /var/www/html/
 
 
 # 解压文件
-#RUN tar -xzf /var/www/html/v3.12.3.tar.gz -C /var/www/html/
+RUN tar -xzf /var/www/html/v3.12.3.tar.gz -C /var/www/html/
 
 # 删除压缩包
 #RUN rm /var/www/html/v3.12.3.tar.gz
