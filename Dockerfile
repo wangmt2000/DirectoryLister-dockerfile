@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
     libpng-dev \
+    tar \
  && docker-php-ext-install -j$(nproc) zip 
  # php:7.4-apache 自带dom和fileinfo扩展
 # 下载并解压 Directory Lister
