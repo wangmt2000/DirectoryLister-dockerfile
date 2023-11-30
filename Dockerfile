@@ -29,7 +29,9 @@ RUN tar -xzf /var/www/html/DirectoryLister-3.12.3.tar.gz -C /var/www/html/
 
 # 配置 Apache 服务器
 RUN a2enmod rewrite
-COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
+#COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
+
+COPY apache-config.conf /etc/apache2/sites-enabled/000-default.conf
 
 # 设置文件权限（根据需要进行调整）
 #RUN chown -R www-data:www-data /var/www/html/directory-lister
